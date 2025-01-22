@@ -91,12 +91,16 @@ function submitQuiz() {
             document.getElementById('quizContainer').innerHTML = `
                 <h3>You completed the quiz!</h3>
                 <p>Your score: ${score}/${quizData.length}</p>
-                <button class="btn" onclick="startQuiz()">Restart Quiz</button>
+                <button class="btn" onclick="resetQuiz()">Restart Quiz</button>
             `;
-            currentQuiz = 0;
-            score = 0;
         }
     }
+}
+
+function resetQuiz() {
+    currentQuiz = 0;
+    score = 0;
+    startQuiz();
 }
 
 // Challenge Functions
@@ -123,6 +127,7 @@ function testSolution() {
                     passed = false;
                 }
             });
+            passed;
         `);
 
         if (passed) {
