@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Learning Hub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">Dev Learning Hub</div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Main Grid -->
+        <div class="grid">
+            <div class="card">
+                <h3>Coding Challenges</h3>
+                <p>Test your skills with our interactive challenges.</p>
+                <button class="btn" onclick="showChallenge()">Start Challenge</button>
+            </div>
+            <div class="card">
+                <h3>Interactive Tutorials</h3>
+                <p>Learn step by step with guided tutorials.</p>
+                <button class="btn" onclick="startTutorial()">Begin Tutorial</button>
+            </div>
+            <div class="card">
+                <h3>Quiz Section</h3>
+                <p>Test your knowledge with our quizzes.</p>
+                <button class="btn" onclick="startQuiz()">Take Quiz</button>
+            </div>
+        </div>
+
+        <!-- Quiz Section -->
+        <div class="quiz-container" id="quizContainer">
+            <h3>JavaScript Fundamentals Quiz</h3>
+            <div id="questionContainer"></div>
+            <button class="btn" onclick="submitQuiz()">Submit Answer</button>
+        </div>
+
+        <!-- Coding Challenge Section -->
+        <div class="code-challenge" id="challengeContainer" style="display: none;">
+            <h3>Daily Coding Challenge</h3>
+            <div class="challenge-description">
+                <p>Write a function that reverses a string without using the built-in reverse() method.</p>
+                <pre><code class="javascript">
+function reverseString(str) {
+    // Your code here
+}
+                </code></pre>
+            </div>
+            <textarea id="codeInput" class="code-editor" rows="10"></textarea>
+            <button class="btn" onclick="testSolution()">Test Solution</button>
+            <div id="testResults"></div>
+        </div>
+
+        <!-- Tutorial Section -->
+        <div class="tutorial-container" id="tutorialContainer" style="display: none;">
+            <h3>JavaScript Basics Tutorial</h3>
+            <div class="tutorial-content">
+                <div class="tutorial-step" id="tutorialStep"></div>
+                <button class="btn" onclick="nextStep()">Next Step</button>
+            </div>
+        </div>
+
+        <!-- Resource Library -->
+        <div class="resource-section">
+            <h3>Resource Library</h3>
+            <ul class="resource-list">
+                <li>
+                    <h4>JavaScript Fundamentals</h4>
+                    <p>Comprehensive guide to JavaScript basics</p>
+                </li>
+                <li>
+                    <h4>Web Development Tools</h4>
+                    <p>Essential tools for modern web development</p>
+                </li>
+                <li>
+                    <h4>Best Practices</h4>
+                    <p>Coding standards and best practices</p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Community Showcase -->
+        <div class="community-showcase">
+            <h3>Community Showcase</h3>
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <h4>Project Name</h4>
+                    <p>By Community Member</p>
+                </div>
+                <div class="showcase-item">
+                    <h4>Project Name</h4>
+                    <p>By Community Member</p>
+                </div>
+                <div class="showcase-item">
+                    <h4>Project Name</h4>
+                    <p>By Community Member</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
